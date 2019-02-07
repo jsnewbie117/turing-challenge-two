@@ -69,3 +69,18 @@ mat-sidenav {
     margin: 0 ;
   }
 }
+
+/* Forms */
+.form-container {
+  width: 100%;
+  max-width: 410px;
+  padding: 84px 8px;
+  h6 {
+    margin-bottom: 70px;
+  }
+  mat-form-field {
+    width: 100%;
+    display: block;
+    margin-bottom: 50px;
+  }
+}

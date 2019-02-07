@@ -1,15 +1,27 @@
 <mat-sidenav-container style="height: 100%;" [hasBackdrop]="false">
-  <mat-sidenav #sidenav [opened]="true">
+  <mat-sidenav #sidenav [autoFocus]="false">
     <div class="sidenav-content">
       <h2 class="user-name gordita-medium text-truncate">Giselle</h2>
       <div class="nav-menu gordita-medium">
         <mat-nav-list>
-          <h3 matSubheader><span class="nav-item">ACCOUNT</span></h3>
-          <a mat-list-item><span class="nav-item">Career</span></a>
-          <a mat-list-item routerLink="personal" routerLinkActive="active"><span class="nav-item">Personal</span></a>
-          <h3 matSubheader><span class="nav-item">MANAGE</span></h3>
-          <a mat-list-item><span class="nav-item">Password</span></a>
-          <a mat-list-item routerLink="email" routerLinkActive="active"><span class="nav-item">Email</span></a>
+          <h3 matSubheader>
+            <span class="nav-item">ACCOUNT</span>
+          </h3>
+          <a mat-list-item>
+            <span class="nav-item">Career</span>
+          </a>
+          <a mat-list-item (click)="tab = 'personal'" [ngClass]="{active: tab === 'personal'}">
+            <span class="nav-item">Personal</span>
+          </a>
+          <h3 matSubheader>
+            <span class="nav-item">MANAGE</span>
+          </h3>
+          <a mat-list-item>
+            <span class="nav-item">Password</span>
+          </a>
+          <a mat-list-item (click)="tab = 'email'" [ngClass]="{active: tab === 'email'}">
+            <span class="nav-item">Email</span>
+          </a>
         </mat-nav-list>
       </div>
     </div>
@@ -20,7 +32,35 @@
       <h6>Tell us a little more about yourself</h6>
     </div>
     <div class="d-flex justify-content-center">
-      <router-outlet></router-outlet>
+      <div class="form-container" *ngIf="tab === 'personal'">
+        <h6 class="font-gordita-bold">Personal Information</h6>
+        <mat-form-field>
+          <input matInput placeholder="First name">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Last name">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Phone">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-select placeholder="Country">
+            <mat-option value="option">United States</mat-option>
+            <mat-option value="option">Canada</mat-option>
+            <mat-option value="option">Philippines</mat-option>
+            <mat-option value="option">Australia</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="form-container" *ngIf="tab === 'email'">
+        <h6 class="font-gordita-bold">Change email address</h6>
+        <mat-form-field>
+          <input matInput placeholder="New email">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Confirm new email">
+        </mat-form-field>
+      </div>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
