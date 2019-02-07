@@ -68,13 +68,28 @@ mat-sidenav {
   h6 {
     margin: 0 ;
   }
+  .user-badge {
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    .name {
+      font-size: 14px;
+      margin-right: 20px;
+    }
+    .pic {
+      height: 58px;
+      width: 58px;
+      background: #e1e1e1;
+      border-radius: 50%;
+    }
+  }
 }
 
 /* Forms */
 .form-container {
   width: 100%;
   max-width: 410px;
-  padding: 84px 8px;
+  padding: 84px 8px 0;
   h6 {
     margin-bottom: 70px;
   }
