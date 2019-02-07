@@ -1,5 +1,5 @@
 <mat-sidenav-container style="height: 100%;" [hasBackdrop]="false">
-  <mat-sidenav #sidenav>
+  <mat-sidenav #sidenav [opened]="true">
     <div class="sidenav-content">
       <h2 class="user-name gordita-medium text-truncate">Giselle</h2>
       <div class="nav-menu gordita-medium">
@@ -15,16 +15,17 @@
     </div>
   </mat-sidenav>
   <mat-sidenav-content>
+    <div class="header text-center">
+      <h1 class="font-gordita-medium">Your account</h1>
+      <h6>Tell us a little more about yourself</h6>
+    </div>
     <div class="d-flex justify-content-center">
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
 <div class="sidenav-toggle">
-  <button mat-icon-button mat-flat-button color="primary" (click)="sidenav.toggle()" *ngIf="sidenav.opened">
-    <mat-icon>arrow_forward</mat-icon>
-  </button>
-  <button mat-icon-button (click)="sidenav.toggle()" *ngIf="!sidenav.opened">
-    <mat-icon>arrow_backward</mat-icon>
+  <button mat-icon-button (click)="sidenav.toggle()" [ngClass]="{active: sidenav.opened}">
+    <mat-icon>{{sidenav.opened ? 'arrow_forward' : 'arrow_backward'}}</mat-icon>
   </button>
 </div>

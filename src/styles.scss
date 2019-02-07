@@ -22,6 +22,22 @@
   src: url('assets/fonts/hinted-GorditaBold.ttf') format('truetype');
 }
 
+.font-fakt-pro {
+  @include font-fakt-pro;
+}
+
+.font-gordita-regular {
+  @include font-gordita-regular;
+}
+
+.font-gordita-medium {
+  @include font-gordita-medium;
+}
+
+.font-gordita-bold {
+  @include font-gordita-bold;
+}
+
 html, body {
   height: 100%;
   color: $dark-gray;

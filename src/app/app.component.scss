@@ -1,7 +1,9 @@
 @import "../assets/sass-utils";
 
+/* Sidenav */
 mat-sidenav-container {
   background-color: #ffffff;
+  color: $dark-gray;
 }
 
 .sidenav-toggle {
@@ -9,6 +11,14 @@ mat-sidenav-container {
   top: 24px;
   left: 24px;
   z-index: 1;
+  button {
+    height: 48px;
+    width: 48px;
+    &.active {
+      background: #dc412e;
+      color: #ffffff;
+    }
+  }
 }
 
 mat-sidenav {
@@ -19,12 +29,14 @@ mat-sidenav {
 .sidenav-content {
   width: 240px;
   .user-name {
-    margin: 125px 24px 40px;
+    margin: 125px 30px 30px;
+    font-size: 29px;
+    @include font-gordita-medium;
   }
   .nav-menu {
     border-top: 2px solid $light-gray;
     .nav-item {
-      padding: 0 8px;
+      padding: 0 15px;
     }
     h3 {
       font-size: 13px;
@@ -34,11 +46,26 @@ mat-sidenav {
     .mat-list-item {
       height: 60px;
       color: $gray;
+      @include font-gordita-regular;
       &.active {
         background: $light-gray;
         color: $dark-gray;
         @include font-gordita-bold;
       }
     }
+  }
+}
+
+/* Header */
+.header {
+  border-bottom: 3px solid $light-gray;
+  padding: 120px 0 100px;
+  h1 {
+    margin-bottom: 37px;
+    font-size: 44px;
+    line-height: 52px;
+  }
+  h6 {
+    margin: 0 ;
   }
 }
