@@ -1,0 +1,44 @@
+@import "../assets/sass-utils";
+
+mat-sidenav-container {
+  background-color: #ffffff;
+}
+
+.sidenav-toggle {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 1;
+}
+
+mat-sidenav {
+  box-shadow: none !important;
+  border-right: 2px solid $light-gray;
+}
+
+.sidenav-content {
+  width: 240px;
+  .user-name {
+    margin: 125px 24px 40px;
+  }
+  .nav-menu {
+    border-top: 2px solid $light-gray;
+    .nav-item {
+      padding: 0 8px;
+    }
+    h3 {
+      font-size: 13px;
+      color: $dark-gray;
+      @include font-fakt-pro;
+    }
+    .mat-list-item {
+      height: 60px;
+      color: $gray;
+      &.active {
+        background: $light-gray;
+        color: $dark-gray;
+        @include font-gordita-bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+$dark-gray: #423f3f;
+$gray: #7e7e7e;
+$light-gray: #f9f9f9;
+
+@mixin font-fakt-pro() {
+  font-family: "Fakt Pro", Arial, sans-serif !important;
+}
+
+@mixin font-gordita-regular() {
+  font-family: "Gordita Regular", Arial, sans-serif !important;
+}
+
+@mixin font-gordita-medium() {
+  font-family: "Gordita Medium", Arial, sans-serif !important;
+}
+
+@mixin font-gordita-bold() {
+  font-family: "Gordita Bold", Arial, sans-serif !important;
+}

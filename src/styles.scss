@@ -1,2 +1,34 @@
 @import "~bootstrap/dist/css/bootstrap.min";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "assets/sass-utils";
+
+@font-face {
+  font-family: 'Gordita Regular';
+  src: url('assets/fonts/hinted-GorditaRegular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fakt Pro';
+  src: url('assets/fonts/A8ABDE12F18C753619F57193C5FA296E.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gordita Medium';
+  src: url('assets/fonts/hinted-GorditaMedium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gordita Bold';
+  src: url('assets/fonts/hinted-GorditaBold.ttf') format('truetype');
+}
+
+html, body {
+  height: 100%;
+  color: $dark-gray;
+  @include font-gordita-regular;
+}
+
+/* Bootstrap overrides below */
+button:focus {
+  outline: none;
+}
